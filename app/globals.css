@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Finance Theme - Dark Navy & Gold */
+    --color-bg: 15 23 42; /* slate-900 */
+    --color-fg: 248 250 252; /* slate-50 */
+    --color-accent: 255 215 0; /* gold */
+    --color-primary: 59 130 246; /* blue-500 */
+    --color-surface: 30 41 59; /* slate-800 */
+  }
+
+  * {
+    @apply border-slate-700;
+  }
+
+  body {
+    @apply bg-slate-900 text-slate-50;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(135deg, rgb(15 23 42) 0%, rgb(30 41 59) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-slate-800 bg-opacity-50 backdrop-blur-sm border border-slate-700 rounded-lg;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:from-yellow-400 hover:to-yellow-500 transition-all duration-200 shadow-lg hover:shadow-glow;
+  }
+
+  .btn-disabled {
+    @apply bg-slate-700 text-slate-400 px-6 py-3 rounded-lg font-semibold cursor-not-allowed;
+  }
+
+  .spin-wheel {
+    @apply relative w-64 h-64 rounded-full border-8 border-yellow-500 shadow-glow;
+    background: conic-gradient(
+      from 0deg,
+      rgb(59 130 246) 0deg 60deg,
+      rgb(255 215 0) 60deg 120deg,
+      rgb(139 92 246) 120deg 180deg,
+      rgb(34 197 94) 180deg 240deg,
+      rgb(239 68 68) 240deg 300deg,
+      rgb(236 72 153) 300deg 360deg
+    );
+  }
+
+  .interest-tag {
+    @apply px-4 py-2 rounded-md border-2 border-slate-600 bg-slate-800 text-slate-200 cursor-pointer transition-all duration-200 hover:border-yellow-500 hover:bg-slate-700;
+  }
+
+  .interest-tag-selected {
+    @apply border-yellow-500 bg-yellow-500 bg-opacity-20 text-yellow-400;
+  }
+
+  .result-card {
+    @apply glass-card p-6 space-y-4 shadow-card;
+  }
+}
+
+@layer utilities {
+  .animate-spin-wheel {
+    animation: spin-wheel 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+  }
+
+  @keyframes spin-wheel {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+}
