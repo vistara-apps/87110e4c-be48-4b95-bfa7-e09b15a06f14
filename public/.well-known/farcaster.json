@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Spin & Grow",
+    "subtitle": "Built with Zara",
+    "description": "Spin & Grow is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://87110e4cbe484b95bfa7e09b15a06f14-ifur.vercel.app",
+    "splashImageUrl": "https://87110e4cbe484b95bfa7e09b15a06f14-ifur.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://87110e4cbe484b95bfa7e09b15a06f14-ifur.vercel.app/image.png",
+    "tagline": "Spin & Grow",
+    "screenshotUrls": [
+      "https://87110e4cbe484b95bfa7e09b15a06f14-ifur.vercel.app/screenshot.png",
+      "https://87110e4cbe484b95bfa7e09b15a06f14-ifur.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://87110e4cbe484b95bfa7e09b15a06f14-ifur.vercel.app/api/webhook"
+  }
+}
